@@ -1,30 +1,14 @@
-<h1><p align="center"><img src="./ai.svg" alt="藍" height="200"></p></h1>
-<p align="center">An Ai for Misskey. <a href="./torisetu.md">About Ai</a></p>
+<h1><p align="center"><img src="./ai.svg" alt="AiCore" height="200"><img src="https://github.com/AyumuNekozuki/mashiro/blob/master/mashiro.png?raw=true alt="AiCore" height="200"></p></h1>
+<p align="center">An Mashiro for Misskey. <a href="./torisetu.md">About Mashiro</a></p>
 
 ## これなに
 Misskey用の日本語Botです。
+[藍](https://github.com/syuilo/ai)をベースに、各種機能を追加しました。
 
-## インストール
-> Node.js と npm と MeCab (オプション) がインストールされている必要があります。
-
-まず適当なディレクトリに `git clone` します。
-次にそのディレクトリに `config.json` を作成します。中身は次のようにします:
-``` json
-{
-	"host": "https:// + あなたのインスタンスのURL (末尾の / は除く)",
-	"i": "藍として動かしたいアカウントのアクセストークン",
-	"master": "管理者のユーザー名(オプション)",
-	"notingEnabled": "ランダムにノートを投稿する機能を無効にする場合は false を入れる",
-	"keywordEnabled": "キーワードを覚える機能 (MeCab が必要) を有効にする場合は true を入れる (無効にする場合は false)",
-	"chartEnabled": "チャート機能を無効化する場合は false を入れてください",
-	"reversiEnabled": "藍とリバーシで対局できる機能を有効にする場合は true を入れる (無効にする場合は false)",
-	"serverMonitoring": "サーバー監視の機能を有効にする場合は true を入れる (無効にする場合は false)",
-	"mecab": "MeCab のインストールパス (ソースからインストールした場合、大体は /usr/local/bin/mecab)",
-	"mecabDic": "MeCab の辞書ファイルパス (オプション)",
-	"memoryDir": "memory.jsonの保存先（オプション、デフォルトは'.'（レポジトリのルートです））"
-}
-```
-`npm install` して `npm run build` して `npm start` すれば起動できます
+## オリジナル藍との違い
+- 一部ワードが変更されています
+- 一部機能をDiscordでも使えるようにしました
+- 一部機能を追加しました
 
 ## Dockerで動かす
 まず適当なディレクトリに `git clone` します。
@@ -42,7 +26,13 @@ Misskey用の日本語Botです。
 	"serverMonitoring": "サーバー監視の機能を有効にする場合は true を入れる (無効にする場合は false)",
 	"mecab": "/usr/bin/mecab",
 	"mecabDic": "/usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd/",
-	"memoryDir": "data"
+	"memoryDir": "data",
+	"discordBotToken": "Discord Bot Token (無効にする場合は '')",
+	"discordCurrent": {
+		"guild": "自動メッセージの投稿先サーバーID",
+		"channel": "自動メッセージの投稿先チャンネルID",
+		"owner": "オーナーのユーザーID"
+	}
 }
 ```
 `docker-compose build` して `docker-compose up` すれば起動できます。
