@@ -35,6 +35,10 @@ import NotingModule from './modules/noting';
 import PollModule from './modules/poll';
 import ReminderModule from './modules/reminder';
 
+
+import Mashiro_discord_Core from './discord/index';
+
+
 console.log('   __    ____  _____  ___ ');
 console.log('  /__\\  (_  _)(  _  )/ __)');
 console.log(' /(__)\\  _)(_  )(_)( \\__ \\');
@@ -92,3 +96,5 @@ promiseRetry(retry => {
 }).catch(e => {
 	log(chalk.red('Failed to fetch the account'));
 });
+
+Mashiro_discord_Core(config.discordBotToken);

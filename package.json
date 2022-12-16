@@ -1,5 +1,5 @@
 {
-	"_v": "1.5.0",
+	"_v": "1.5.0-mashiro-001",
 	"main": "./built/index.js",
 	"scripts": {
 		"start": "node ./built",
@@ -20,10 +20,12 @@
 		"autobind-decorator": "2.4.0",
 		"canvas": "2.10.2",
 		"chalk": "4.1.1",
+		"discord.js": "14.7.1",
 		"lokijs": "1.5.12",
 		"memory-streams": "0.1.3",
 		"misskey-reversi": "0.0.5",
 		"module-alias": "2.2.2",
+		"node-cron": "3.0.2",
 		"promise-retry": "2.0.1",
 		"random-seed": "0.3.0",
 		"reconnecting-websocket": "4.4.0",

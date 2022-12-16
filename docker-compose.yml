@@ -10,3 +10,6 @@ services:
       - './font.ttf:/ai/font.ttf:ro'
       - './data:/ai/data'
     restart: always
+    platform: linux/x86_64
+    environment:
+      TZ: Asia/Tokyo
