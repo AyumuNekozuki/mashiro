@@ -102,4 +102,4 @@ promiseRetry(
 		log(chalk.red("Failed to fetch the account"));
 	});
 
-Mashiro_discord_Core(config.discordBotToken);
+// Mashiro_discord_Core(config.discordBotToken);
